@@ -1,1 +1,12 @@
-coc/extensions/package.json
+{
+  "dependencies": {
+    "coc-json": ">=1.4.2",
+    "coc-prettier": ">=9.3.0",
+    "coc-pyright": ">=1.1.252",
+    "coc-rls": ">=1.1.6",
+    "coc-rust-analyzer": ">=0.62.1",
+    "coc-sql": ">=0.10.4",
+    "coc-sqlfluff": ">=0.8.0",
+    "coc-yaml": ">=1.7.5"
+  }
+}
