@@ -1,0 +1,11 @@
+{   
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "rust"
+  ],
+  "python.venvPath": "/Users/jonathankumarich/.virtualenvs",
+  "sqlfluff.dialect": "bigquery",
+  "sql.formatOptions": {
+      "language": "bigquery"
+  }
+}
