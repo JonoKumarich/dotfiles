@@ -1,5 +1,9 @@
-.DS_Store
+*
 
-/.ctagsignore
-/tags
-plugin/
+!nvim/
+!nvim/**
+nvim/plugin/
+
+!tmux/
+!tmux/**
+
