@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('tpope/vim-fugitive')
+  use('christoomey/vim-tmux-navigator')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
