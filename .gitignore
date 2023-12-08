@@ -7,3 +7,5 @@ nvim/plugin/
 !tmux/
 !tmux/**
 
+!yabai/
+!yabai/**
