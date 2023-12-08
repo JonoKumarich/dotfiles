@@ -1,11 +1,5 @@
-*
-
-!nvim/
-!nvim/**
-nvim/plugin/
-
-!tmux/
-!tmux/**
-
-!yabai/
-!yabai/**
+gh/
+github-copilot/
+iterm2/
+omf/
+**/plugins/
