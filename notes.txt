@@ -1,0 +1,1 @@
+Iterm Color Scheme: https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Ayu%20Mirage.itermcolors
