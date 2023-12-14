@@ -3,6 +3,6 @@ github-copilot/
 iterm2/
 omf/
 fish/
+tmux/plugins/**
 
-**/plugins/
 nvim/lazy-lock.json
