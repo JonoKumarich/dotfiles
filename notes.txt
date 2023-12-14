@@ -7,12 +7,33 @@ Good whole setup:  https://www.youtube.com/watch?v=ZjMzBd1Dqz8
 TODO: 
 - Add custom functions to git (e..g vim.fish in fish/functions/vim.fish)
 - Add a nvim color scheme (the one in second video seems good) (make sure to set lazy loading off)
-
+- Map comment key (gcc) to something better)
+- Stop comments auto spreading to next line when pressing enter
+- RRethy/vim-illuminate for highlighting current key word in rest of file
 
 Packages:
 - Note taking plugin: https://github.com/renerocksai/telekasten.nvim
 
-
-
 Things to remember:
-- _ ff, fg -> Telescope finder
+
+Telescope:
+ - ff: File finder
+ - fg: text searched (grep)
+ - fk: Shows all keymaps
+ - fb: Shows file buffer
+
+Indenting:
+ - > or < (once in visual, twice in normal)
+
+Commenting:
+ - gcc : Would like to map this to something better in the future
+
+Treesitter:
+- This is the syntax highlighting plugin. Need to add new languages manually in plugin file
+
+
+
+
+
+
+

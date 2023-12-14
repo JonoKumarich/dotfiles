@@ -12,6 +12,7 @@ end
 
 require("jkumarich.core.globals")
 require("jkumarich.core.options")
+require("jkumarich.core.keymaps")
 
 vim.opt.rtp:prepend(lazypath)
 
