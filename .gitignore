@@ -5,3 +5,4 @@ omf/
 fish/
 
 **/plugins/
+nvim/lazy-lock.json
