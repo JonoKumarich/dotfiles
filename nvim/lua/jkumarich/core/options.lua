@@ -14,6 +14,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Appearance
+opt.number = true
 opt.relativenumber = true
 
 -- Behaviour

@@ -4,5 +4,6 @@ iterm2/
 omf/
 fish/
 tmux/plugins/**
+jgit/
 
 nvim/lazy-lock.json
