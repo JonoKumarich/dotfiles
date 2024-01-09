@@ -32,6 +32,8 @@ Treesitter:
 - This is the syntax highlighting plugin. Need to add new languages manually in plugin file
 
 
+Surrounding words with quotes:
+- https://github.com/tpope/vim-surround
 
 
 
