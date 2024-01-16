@@ -14,3 +14,11 @@ keymap.set('i', '<Down>', '<Nop>', { noremap = true, silent = true })
 keymap.set('i', '<Left>', '<Nop>', { noremap = true, silent = true })
 keymap.set('i', '<Right>', '<Nop>', { noremap = true, silent = true })
 
+-- Double leader to switch between two files
+keymap.set('n', '<Leader><Leader>', '<C-^>', {noremap = true, silent = true})
+
+-- Copy to system clipboard
+keymap.set('n', '<Leader>yy', '"+yy', {noremap = true, silent = true})
+keymap.set('n', '<Leader>y', '"+y', {noremap = true, silent = true})
+keymap.set('v', '<Leader>y', '"+y', {noremap = true, silent = true})
+
