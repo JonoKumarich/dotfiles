@@ -7,6 +7,10 @@ history = 0
 size = 18.0
 
 
+[window]
+decorations = "Buttonless"
+
+
 # Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
