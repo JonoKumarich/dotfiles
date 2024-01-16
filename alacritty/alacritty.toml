@@ -1,4 +1,13 @@
-# Base16 Gruvbox dark, hard 256 - alacritty color config
+[scrolling]
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+history = 0
+
+[font]
+size = 18.0
+
+
+# COLOR SCHEME: Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
 [[colors.indexed_colors]]
@@ -52,3 +61,4 @@ yellow = "0xfabd2f"
 [colors.primary]
 background = "0x1d2021"
 foreground = "0xd5c4a1"
+
