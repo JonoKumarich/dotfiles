@@ -35,7 +35,8 @@ Treesitter:
 Surrounding words with quotes:
 - https://github.com/tpope/vim-surround
 
-
+Shell history tool:
+mcfly - https://github.com/cantino/mcfly/tree/master
 
 
 
