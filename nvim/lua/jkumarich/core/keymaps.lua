@@ -22,3 +22,7 @@ keymap.set('n', '<Leader>yy', '"+yy', {noremap = true, silent = true})
 keymap.set('n', '<Leader>y', '"+y', {noremap = true, silent = true})
 keymap.set('v', '<Leader>y', '"+y', {noremap = true, silent = true})
 
+-- Center view after page jump
+keymap.set('n', '<C-u>', '<C-u>zz')
+keymap.set('n', '<C-d>', '<C-d>zz')
+
