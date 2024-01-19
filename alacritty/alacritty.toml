@@ -7,6 +7,7 @@ history = 0
 size = 18.0
 
 
+# Removes top window buttons for MacOS
 [window]
 decorations = "Buttonless"
 
