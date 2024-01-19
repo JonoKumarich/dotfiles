@@ -1,13 +1,4 @@
-Iterm Color Scheme: https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Ayu%20Mirage.itermcolors
-Iterm Font: Source Code Pro
-
-nvim lazy setup: https://www.youtube.com/watch?v=6mxWayq-s9I
-Good whole setup:  https://www.youtube.com/watch?v=ZjMzBd1Dqz8
-
 TODO: 
-- Add custom functions to git (e..g vim.fish in fish/functions/vim.fish)
-- Add a nvim color scheme (the one in second video seems good) (make sure to set lazy loading off)
-- Map comment key (gcc) to something better)
 - Stop comments auto spreading to next line when pressing enter
 - RRethy/vim-illuminate for highlighting current key word in rest of file
 
