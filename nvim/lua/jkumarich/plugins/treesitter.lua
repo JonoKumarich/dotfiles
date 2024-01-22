@@ -18,7 +18,8 @@ local config = function()
             "rust",
             "fish",
             "sql",
-            "toml"
+            "toml",
+            "go"
 		},
 		auto_install = true,
 		highlight = {
