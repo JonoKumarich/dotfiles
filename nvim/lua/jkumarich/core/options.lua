@@ -16,6 +16,7 @@ opt.smartcase = true
 -- Appearance
 opt.number = true
 opt.relativenumber = true
+vim.opt.conceallevel = 1
 
 -- Behaviour
 opt.hidden = true
