@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "gh"
+brew "neovim"
+brew "tmux"
+cask "1password-cli"

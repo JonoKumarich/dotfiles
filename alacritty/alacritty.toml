@@ -3,6 +3,10 @@
 # Specifying '0' will disable scrolling.
 history = 0
 
+[shell]
+program = "/opt/homebrew/bin/fish"
+args = ["--login"]
+
 [font]
 size = 18.0
 
