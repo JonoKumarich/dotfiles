@@ -20,7 +20,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "/Users/jonathankumarich/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Vault",
+        path = "/Users/jkumarich/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Vault",
       },
     },
     -- see below for full list of options 👇
