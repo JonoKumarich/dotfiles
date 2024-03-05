@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: update-brewfile
         name: Update Brewfile
-        entry: /Users/jkumarich/.config/update_brewfile.sh
+        entry: /Users/jonathankumarich/.config/update_brewfile.sh
         language: script
         stages: [pre-commit]
 

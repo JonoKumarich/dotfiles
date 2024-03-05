@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the directory containing the Brewfile
-cd /Users/jkumarich/.config || exit
+cd /Users/jonathankumarich/.config || exit
 
 # Remove the existing Brewfile
 rm -f Brewfile

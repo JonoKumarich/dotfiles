@@ -3,4 +3,9 @@ if status is-interactive
 end
 
 set -gx PATH /opt/homebrew/bin $PATH
+set -x PATH $PATH /Users/jonathankumarich/.local/bin
+
+pyenv init - | source
+
+
 

@@ -4,7 +4,7 @@
 history = 0
 
 [shell]
-program = "/opt/homebrew/bin/fish"
+program = "/usr/local/bin/fish"
 args = ["--login"]
 
 [font]
