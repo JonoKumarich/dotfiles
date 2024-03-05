@@ -1,16 +1,16 @@
 [user]
-	name = JonoKumarich
-	email = jonathankumarich@gmail.com
+    name = JonoKumarich
+    email = jonathankumarich@gmail.com
 [credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = 
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = 
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [push]
-	autoSetupRemote = true
+    autoSetupRemote = true
 [pull]
     rebase = true
 [fetch]
