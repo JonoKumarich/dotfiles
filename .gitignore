@@ -4,3 +4,6 @@ tmux/plugins/**
 fish/fish_variables
 
 nvim/lazy-lock.json
+karabiner/assets/
+karabiner/automatic_backups/
+gcloud/
