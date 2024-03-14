@@ -4,6 +4,7 @@ end
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -x PATH $PATH /Users/jonathankumarich/.local/bin
+set -x PIP_REQUIRE_VIRTUALENV true
 
 alias z="zoxide"
 
