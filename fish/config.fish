@@ -3,4 +3,14 @@ if status is-interactive
 end
 
 set -gx PATH /opt/homebrew/bin $PATH
+set -x PATH $PATH /Users/jkumarich/.local/bin
+set -x PIP_REQUIRE_VIRTUALENV true
+
+alias z="zoxide"
+
+alias l="eza"
+alias ll="eza -l"
+alias lll="eza -la"
+
+
 
