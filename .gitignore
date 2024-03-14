@@ -2,6 +2,8 @@ gh/
 github-copilot/
 tmux/plugins/**
 fish/fish_variables
+omf/
+fish/conf.d/
 
 nvim/lazy-lock.json
 karabiner/assets/

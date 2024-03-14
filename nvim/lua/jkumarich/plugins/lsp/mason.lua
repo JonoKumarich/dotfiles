@@ -43,6 +43,7 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "pylint", -- python linter
+        "mypy",
       },
     })
   end,

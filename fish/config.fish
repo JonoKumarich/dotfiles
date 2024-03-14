@@ -5,7 +5,11 @@ end
 set -gx PATH /opt/homebrew/bin $PATH
 set -x PATH $PATH /Users/jonathankumarich/.local/bin
 
-pyenv init - | source
+alias z="zoxide"
+
+alias l="eza"
+alias ll="eza -l"
+alias lll="eza -la"
 
 
 
