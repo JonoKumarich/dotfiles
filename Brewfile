@@ -21,6 +21,7 @@ brew "nvm"
 brew "pipenv", link: false
 brew "pre-commit"
 brew "prettier"
+brew "pyenv"
 brew "pyright"
 brew "python-lsp-server"
 brew "ripgrep"
