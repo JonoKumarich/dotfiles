@@ -28,3 +28,9 @@ keymap.set('n', '<C-d>', '<C-d>zz')
 keymap.set('n', 'n', 'nzz')
 keymap.set('n', 'N', 'Nzz')
 
+-- Showing diagnostics
+keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+keymap.set('n', '<Leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror message' })
+keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix' })
+
