@@ -22,5 +22,5 @@ local opts = {
 	},
 }
 
-require("lazy").setup({ { import = "jkumarich.plugins" }, { import = "jkumarich.plugins.lsp" } })
+require("lazy").setup({ { import = "jkumarich.plugins" } })
 
