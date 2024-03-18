@@ -34,3 +34,4 @@ keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnosti
 keymap.set('n', '<Leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror message' })
 keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix' })
 
+
