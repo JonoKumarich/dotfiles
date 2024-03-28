@@ -12,7 +12,7 @@ return {
         local mason_lspconfig = require 'mason-lspconfig'
         mason_lspconfig.setup {
             ensure_installed = { 
-                "pyright" 
+                "pyright",
             }
         }
         require("lspconfig").pyright.setup {

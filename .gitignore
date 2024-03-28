@@ -2,6 +2,7 @@ gh/
 github-copilot/
 tmux/plugins/**
 fish/fish_variables
+fish/completions/
 
 nvim/lazy-lock.json
 gcloud/
