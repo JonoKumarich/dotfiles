@@ -10,6 +10,21 @@ args = ["--login"]
 [font]
 size = 18.0
 
+[font.normal]
+family="CodeNewRoman Nerd Font Mono"
+style="Regular"
+
+  # # The `bold` and `italic` sections can be used to specify the style for bold and italic text.
+  # bold:
+  #   family: "Hack Nerd Font"
+  #   style: Bold
+  # italic:
+  #   family: "Hack Nerd Font"
+  #   style: Italic
+  # bold_italic:
+  #   family: "Hack Nerd Font"
+  #   style: Bold Italic
+
 
 # Removes top window buttons for MacOS
 [window]
