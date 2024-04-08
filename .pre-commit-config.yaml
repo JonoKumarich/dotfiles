@@ -1,9 +1,0 @@
-repos:
-  - repo: local
-    hooks:
-      - id: update-brewfile
-        name: Update Brewfile
-        entry: /Users/jkumarich/.config/update_brewfile.sh
-        language: script
-        stages: [pre-commit]
-

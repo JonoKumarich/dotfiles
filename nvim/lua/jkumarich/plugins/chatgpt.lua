@@ -1,6 +1,6 @@
 return {
   "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
+    event = "BufRead",
     config = function()
       require("chatgpt").setup({
         api_key_cmd = "op read op://private/OpenAI/credential --no-newline"
