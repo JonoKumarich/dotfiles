@@ -17,3 +17,8 @@
     prune = true
 [diff]
     colorMoved = zebra
+[merge]
+    conflictstyle = diff3
+[core]
+	editor = nvim
+	excludesfile = /Users/jkumarich/.config/git/.gitignore_global
