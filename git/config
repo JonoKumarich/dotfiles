@@ -16,9 +16,14 @@
 [fetch]
     prune = true
 [diff]
-    colorMoved = zebra
+    colorMoved = default
 [merge]
     conflictstyle = diff3
 [core]
 	editor = nvim
 	excludesfile = /Users/jkumarich/.config/git/.gitignore_global
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
