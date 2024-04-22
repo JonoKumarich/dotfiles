@@ -14,22 +14,9 @@ size = 18.0
 family="CodeNewRoman Nerd Font Mono"
 style="Regular"
 
-  # # The `bold` and `italic` sections can be used to specify the style for bold and italic text.
-  # bold:
-  #   family: "Hack Nerd Font"
-  #   style: Bold
-  # italic:
-  #   family: "Hack Nerd Font"
-  #   style: Italic
-  # bold_italic:
-  #   family: "Hack Nerd Font"
-  #   style: Bold Italic
-
-
 # Removes top window buttons for MacOS
 [window]
 decorations = "Buttonless"
-
 
 # Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
