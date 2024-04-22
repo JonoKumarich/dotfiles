@@ -22,6 +22,11 @@ keymap.set('n', '<Leader>yy', '"+yy', {noremap = true, silent = true})
 keymap.set('n', '<Leader>y', '"+y', {noremap = true, silent = true})
 keymap.set('v', '<Leader>y', '"+y', {noremap = true, silent = true})
 
+-- To allow deletes and pastes without overwriting the vim buffer
+keymap.set('n', '<Leader>d', '"_d')
+keymap.set('v', '<Leader>d', '"_d')
+keymap.set('v', '<Leader>p', '"_dP')
+
 -- Center view after jumps
 keymap.set('n', '<C-u>', '<C-u>zz')
 keymap.set('n', '<C-d>', '<C-d>zz')
