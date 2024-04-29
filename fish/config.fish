@@ -12,9 +12,7 @@ set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init - | source
 
-alias l="eza"
-alias ls="eza -l"
-alias lsa="eza -la"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 zoxide init fish --cmd cd | source
 
