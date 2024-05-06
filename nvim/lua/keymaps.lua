@@ -54,8 +54,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
-
 -- Center view after jumps
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- To allow deletes and pastes without overwriting the vim buffer
+vim.keymap.set("n", "<Leader>d", '"_d')
+vim.keymap.set("v", "<Leader>d", '"_d')
+vim.keymap.set("v", "<Leader>p", '"_dP')
+
+-- vim: ts=2 sts=2 sw=2 et
