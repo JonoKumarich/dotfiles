@@ -13,7 +13,8 @@ local M = {
 }
 local modules = {
 	["core.defaults"] = {},
-	["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
+	["core.itero"] = {},
+	["core.completion"] = { config = { engine = "nvim-cmp", name = "neorg" } },
 	["core.integrations.nvim-cmp"] = {},
 	["core.concealer"] = { config = { icon_preset = "diamond" } },
 	["core.keybinds"] = {
@@ -29,6 +30,7 @@ local modules = {
 				work = "~/Notes/work",
 				personal = "~/Notes/personal",
 			},
+			default_workspace = "personal",
 		},
 	},
 }

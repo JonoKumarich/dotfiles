@@ -63,4 +63,12 @@ vim.keymap.set("n", "<Leader>d", '"_d')
 vim.keymap.set("v", "<Leader>d", '"_d')
 vim.keymap.set("v", "<Leader>p", '"_dP')
 
+-- Jump to previous file
+vim.keymap.set("n", "<Leader><Leader>", "<C-^>")
+
+-- Copy to system clipboard
+vim.keymap.set("n", "<Leader>yy", '"+yy', { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>y", '"+y', { noremap = true, silent = true })
+vim.keymap.set("v", "<Leader>y", '"+y', { noremap = true, silent = true })
+
 -- vim: ts=2 sts=2 sw=2 et
