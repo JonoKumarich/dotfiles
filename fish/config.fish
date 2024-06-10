@@ -4,6 +4,7 @@ end
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -x PATH $PATH /Users/jkumarich/.local/bin
+
 set -x PIP_REQUIRE_VIRTUALENV true
 set -x VIRTUAL_ENV .venv
 
@@ -18,3 +19,5 @@ alias nvim="nvimvenv"
 
 zoxide init fish --cmd cd | source
 
+
+fish_add_path /Users/jkumarich/.spicetify
