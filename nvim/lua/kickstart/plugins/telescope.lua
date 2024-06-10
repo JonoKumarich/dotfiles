@@ -115,6 +115,13 @@ return {
       vim.keymap.set("n", "<leader>sn", function()
         builtin.find_files({ cwd = vim.fn.stdpath("config") })
       end, { desc = "[S]earch [N]eovim files" })
+
+      vim.keymap.set(
+        "n",
+        "<leader>sp",
+        "<cmd>lua require('telescope').extensions.neoclip.default()<CR>",
+        { desc = "[S]earch [P]aste Buffer" }
+      )
     end,
   },
 }
