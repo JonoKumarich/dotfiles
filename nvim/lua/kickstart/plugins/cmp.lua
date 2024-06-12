@@ -34,12 +34,43 @@ return {
       --  into multiple repos for maintenance purposes.
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
+      "lukas-reineke/cmp-rg",
     },
     config = function()
       -- See `:help cmp`cmp
       local cmp = require("cmp")
       local luasnip = require("luasnip")
       luasnip.config.setup({})
+
+      vim.opt.pumheight = 15
+
+      local kind_icons = {
+        Text = "",
+        Method = "󰆧",
+        Function = "󰊕",
+        Constructor = "",
+        Field = "󰇽",
+        Variable = "󰂡",
+        Class = "󰠱",
+        Interface = "",
+        Module = "",
+        Property = "󰜢",
+        Unit = "",
+        Value = "󰎠",
+        Enum = "",
+        Keyword = "󰌋",
+        Snippet = "",
+        Color = "󰏘",
+        File = "󰈙",
+        Reference = "",
+        Folder = "󰉋",
+        EnumMember = "",
+        Constant = "󰏿",
+        Struct = "",
+        Event = "",
+        Operator = "󰆕",
+        TypeParameter = "󰅲",
+      }
 
       cmp.setup({
         snippet = {
@@ -48,6 +79,25 @@ return {
           end,
         },
         completion = { completeopt = "menu,menuone,noinsert" },
+        formatting = {
+          expandable_indicator = true,
+          fields = { "kind", "abbr", "menu" },
+          format = function(entry, vim_item)
+            vim_item.menu = vim_item.kind
+              .. " "
+              .. ({
+                rg = "[Rg]",
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                vsnip = "[Snippet]",
+                path = "[Path]",
+                orgmode = "[Org]",
+                ["vim-dadbod-completion"] = "[DB]",
+              })[entry.source.name]
+            vim_item.kind = kind_icons[vim_item.kind] or ""
+            return vim_item
+          end,
+        },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
@@ -65,11 +115,10 @@ return {
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
@@ -105,6 +154,21 @@ return {
           { name = "luasnip" },
           { name = "path" },
         },
+      })
+
+      local autocomplete_group =
+        vim.api.nvim_create_augroup("vimrc_autocompletion", { clear = true })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "sql", "mysql", "plsql" },
+        callback = function()
+          cmp.setup.buffer({
+            sources = {
+              { name = "vim-dadbod-completion" },
+              { name = "luasnip" },
+            },
+          })
+        end,
+        group = autocomplete_group,
       })
     end,
   },

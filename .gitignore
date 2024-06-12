@@ -12,3 +12,5 @@ gcloud/
 op/
 spicetify/
 \\
+
+Brewfile.lock.json
