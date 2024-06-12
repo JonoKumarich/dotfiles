@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /Users/jkumarich/.config || exit
+cd $HOME/.config || exit
 rm -f Brewfile
 brew bundle dump
 git add Brewfile

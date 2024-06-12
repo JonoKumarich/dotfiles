@@ -1,10 +1,10 @@
 [user]
-	name = JonoKumarich
-	email = jonathankumarich@gmail.com
+    name = JonoKumarich
+    email = jonathankumarich@gmail.com
 [credential "https://github.com"]
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [credential]
 	helper = osxkeychain
 [push]
@@ -18,8 +18,8 @@
 [merge]
     conflictstyle = diff3
 [core]
-	editor = nvim
-	excludesfile = /Users/jkumarich/.config/git/.gitignore_global
+    editor = nvim
+    excludesfile = ~/.config/git/.gitignore_global
     pager = delta
 [interactive]
     diffFilter = delta --color-only
