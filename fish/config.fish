@@ -17,7 +17,10 @@ pyenv init - | source
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias nvim="nvimvenv"
 
+set -gx MCFLY_KEY_SCHEME vim
 mcfly init fish | source
+
 zoxide init fish --cmd cd | source
 
 fish_add_path $HOME/.spicetify
+
