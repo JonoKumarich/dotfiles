@@ -15,7 +15,7 @@ set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init - | source
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --color=always --long --git --icons=always --no-time --no-user --no-permissions"
 alias nvim="nvimvenv"
 
 set -gx MCFLY_KEY_SCHEME vim

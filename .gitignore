@@ -3,6 +3,7 @@ github-copilot/
 tmux/plugins/**
 fish/fish_variables
 fish/completions/
+fish/conf.d/
 
 karabiner/assets/
 karabiner/automatic_backups/
