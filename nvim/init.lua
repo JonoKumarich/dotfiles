@@ -93,6 +93,9 @@ vim.g.maplocalleader = ","
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+vim.g.python3_host_prog = "$HOME/.venv/bin/python3"
+vim.g.gruvbox_contrast_dark = "hard"
+
 -- [[ Setting options ]]
 require("options")
 
