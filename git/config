@@ -1,6 +1,7 @@
 [user]
-    name = JonoKumarich
+    name = jonathankumarich
     email = jonathankumarich@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPFjnm974xvi8jgpajAqg9myNc8/tc7HuQCz1NU/TJG
 [credential "https://github.com"]
     helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
@@ -25,3 +26,9 @@
     diffFilter = delta --color-only
 [delta]
     navigate = true    # use n and N to move between diff sections
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
