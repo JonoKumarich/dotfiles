@@ -1,25 +1,33 @@
-gh/
-github-copilot/
-tmux/plugins/**
-fish/fish_variables
-fish/completions/
-fish/conf.d/
+*
 
-karabiner/assets/
-karabiner/automatic_backups/
+!alacritty/
+!alacritty/**
 
-nvim/lazy-lock.json
-gcloud/
-op/
+!tmux/
+!tmux/**
 
-spicetify/*
-!spicetify/config-xpui.ini
+!aerospace/
+!aerospace/**
 
-1Password/
-pgcli/
+!fish/
+!fish/config.fish
+!fish/functions/
+!fish/functions/**
 
-qBittorrent/
+!git/
+!git/config
+!git/.gitignore_global
 
-\\
+!karabiner/
+!karabiner/karabiner.json
 
-Brewfile.lock.json
+!kmonad/
+!kmonad/config.kbd
+
+!nvim
+!nvim/**
+
+!tmux/
+!tmux/tmux.conf
+
+
