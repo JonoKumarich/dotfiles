@@ -15,15 +15,11 @@
 
 !git/**
 
-!karabiner/
-!karabiner/karabiner.json
-
-!kmonad/
-!kmonad/config.kbd
-
 !nvim
 !nvim/**
 
 !tmux/
 !tmux/tmux.conf
 
+!kanata
+!kanata/**
