@@ -3,7 +3,7 @@
 # Specifying '0' will disable scrolling.
 history = 0
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]
 
@@ -17,6 +17,10 @@ style="Regular"
 # Removes top window buttons for MacOS
 [window]
 decorations = "Buttonless"
+
+[window.padding]
+x = 16
+y = 16
 
 # Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)

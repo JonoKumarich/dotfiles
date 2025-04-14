@@ -11,12 +11,9 @@
 
 !fish/
 !fish/config.fish
-!fish/functions/
-!fish/functions/**
+!fish/functions/fish_prompt.fish
 
-!git/
-!git/config
-!git/.gitignore_global
+!git/**
 
 !karabiner/
 !karabiner/karabiner.json
@@ -29,5 +26,4 @@
 
 !tmux/
 !tmux/tmux.conf
-
 

@@ -1,34 +1,37 @@
 [user]
-    name = jonathankumarich
-    email = jonathankumarich@gmail.com
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPFjnm974xvi8jgpajAqg9myNc8/tc7HuQCz1NU/TJG
-[credential "https://github.com"]
-    helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-    helper = !/opt/homebrew/bin/gh auth git-credential
+		name = jonathankumarich
+		email = jonathankumarich@gmail.com
 [credential]
-	helper = osxkeychain
+		helper = osxkeychain
+[init]
+		defaultBranch = main
 [push]
-	autoSetupRemote = true
+		autoSetupRemote = true
 [pull]
-    rebase = true
+		rebase = true
 [fetch]
-    prune = true
+		prune = true
 [diff]
-    colorMoved = default
+		colorMoved = default
 [merge]
-    conflictstyle = diff3
+		conflictStyle = zdiff3
 [core]
-    editor = nvim
-    excludesfile = ~/.config/git/.gitignore_global
-    pager = delta
+		editor = nvim
+		excludesfile = ~/.config/git/.gitignore_global
+		hookspath = ~/.config/git/hooks
+		pager = delta
 [interactive]
-    diffFilter = delta --color-only
+		diffFilter = delta --color-only
 [delta]
-    navigate = true    # use n and N to move between diff sections
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-[commit]
-	gpgsign = true
+		navigate = true
+
+
+# https://www.benji.dog/articles/git-config/
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+		path = ~/.config/git/config-github
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
+		path = ~/.config/git/config-gitlab
+
+[includeIf "hasconfig:remote.*.url:git@bitbucket.org:*/**"]
+		path = ~/.config/git/config-bitbucket
