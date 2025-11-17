@@ -8,7 +8,7 @@ program = "/opt/homebrew/bin/fish"
 args = ["--login"]
 
 [font]
-size = 18.0
+size = 20.0
 
 [font.normal]
 family="CodeNewRoman Nerd Font Mono"
@@ -17,10 +17,7 @@ style="Regular"
 # Removes top window buttons for MacOS
 [window]
 decorations = "Buttonless"
-
-[window.padding]
-x = 16
-y = 16
+padding = { x = 10, y = 10 }
 
 # Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)

@@ -1,0 +1,9 @@
+[user]
+		name = jono-tracksuit
+		email = jono.kumarich@gotracksuit.com
+		signingkey = C3337CDEA986A71A
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+

@@ -1,0 +1,9 @@
+[user]
+    name = Jono Kumarich
+    email = jonathankumarich@gmail.com
+    signingkey = BE4BC507DFDFFD50
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+

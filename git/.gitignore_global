@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.envrc
 
 # Spyder project settings
 .spyderproject
@@ -161,3 +162,19 @@ cython_debug/
 
 .python-version
 uv.lock
+
+# sqlls language server config file
+.sqllsrc.json
+
+.claude/
+*.tfvars.local
+CLAUDE.local.md
+
+.channels_cache_v2.json
+.users_cache.json
+
+.crush/
+.secrets
+.beads/
+.mcp.json
+

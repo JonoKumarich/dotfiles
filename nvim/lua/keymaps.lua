@@ -85,3 +85,6 @@ vim.keymap.set("n", "<Leader><Leader>", "<C-^>")
 vim.keymap.set("n", "<Leader>yy", '"+yy', { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("v", "<Leader>y", '"+y', { noremap = true, silent = true })
+
+-- Open Oil file explorer
+vim.keymap.set("n", "<Leader>o", "<cmd>Oil<CR>", { desc = "Open Oil file explorer" })

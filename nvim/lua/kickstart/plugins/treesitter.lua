@@ -15,6 +15,7 @@ return {
         "python",
         "go",
         "rust",
+        "sql",
       },
       -- Autoinstall languages that are not installed
       auto_install = true,

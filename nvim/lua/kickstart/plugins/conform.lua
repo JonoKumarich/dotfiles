@@ -27,10 +27,13 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         -- Conform can also run multiple formatters sequentially
-        python = { "ruff_format", "ruff_fix", "isort" },
+        -- Note: ruff_format includes import sorting, so isort is not needed
+        python = { "ruff_format", "ruff_fix" },
 
-        -- You can use a sub-list to tell conform to run *until* a formatter is found.
-        javascript = { { "prettierd", "prettier" } },
+        sql = { "sqlfluff" },
+
+        -- You can use stop_after_first to run until a formatter is found.
+        javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },

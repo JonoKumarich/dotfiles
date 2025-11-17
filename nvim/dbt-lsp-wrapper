@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Wrapper for dbt-lsp to work with Neovim's LSP client
+# This creates a bidirectional bridge between stdio and TCP socket
+
+set -euo pipefail
+
+PORT=${DBT_LSP_PORT:-7658}
+# Get project dir from environment or find dbt_project.yml
+if [ -n "${DBT_PROJECT_DIR:-}" ]; then
+  PROJECT_DIR="${DBT_PROJECT_DIR}"
+else
+  PROJECT_DIR=$(pwd)
+  # Search upwards for dbt_project.yml
+  while [ "$PROJECT_DIR" != "/" ]; do
+    if [ -f "$PROJECT_DIR/dbt_project.yml" ]; then
+      break
+    fi
+    PROJECT_DIR=$(dirname "$PROJECT_DIR")
+  done
+  if [ "$PROJECT_DIR" = "/" ]; then
+    PROJECT_DIR=$(pwd)
+  fi
+fi
+PROFILES_DIR=${DBT_PROFILES_DIR:-~/.dbt}
+
+# Log startup info to stderr for debugging
+echo "[dbt-lsp-wrapper] Starting with project: $PROJECT_DIR" >&2
+echo "[dbt-lsp-wrapper] Profiles dir: $PROFILES_DIR" >&2
+echo "[dbt-lsp-wrapper] Port: $PORT" >&2
+
+# Start dbt-lsp in background (will connect once socket is listening)
+# Using exec in subshell to inherit all environment variables
+# Use static-analysis mode to work without database connection
+(
+  sleep 1
+  exec dbt-lsp \
+    --socket "${PORT}" \
+    --project-dir "${PROJECT_DIR}" \
+    --profiles-dir "${PROFILES_DIR}" \
+    --static-analysis on \
+    2>&1
+) &
+DBT_PID=$!
+
+# Cleanup on exit
+cleanup() {
+  kill ${DBT_PID} 2>/dev/null || true
+}
+trap cleanup EXIT
+
+# Create bidirectional pipe between stdio and TCP socket
+# This listens on PORT and bridges to stdio
+exec socat STDIO TCP-LISTEN:"${PORT}",reuseaddr

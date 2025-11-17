@@ -1,10 +1,11 @@
 [user]
-		name = jonathankumarich
-		email = jonathankumarich@gmail.com
+  name = Jono Kumarich
+  email = jonathankumarich@gmail.com
 [credential]
 		helper = osxkeychain
 [init]
 		defaultBranch = main
+		templatedir = ~/.git-templates
 [push]
 		autoSetupRemote = true
 [pull]
@@ -18,20 +19,24 @@
 [core]
 		editor = nvim
 		excludesfile = ~/.config/git/.gitignore_global
-		hookspath = ~/.config/git/hooks
 		pager = delta
+		whitespace = error
 [interactive]
 		diffFilter = delta --color-only
 [delta]
 		navigate = true
-
+		line-numbers = true
+		side-by-side = true
 
 # https://www.benji.dog/articles/git-config/
-[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
-		path = ~/.config/git/config-github
-
-[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
-		path = ~/.config/git/config-gitlab
-
-[includeIf "hasconfig:remote.*.url:git@bitbucket.org:*/**"]
-		path = ~/.config/git/config-bitbucket
+# More specific patterns must come FIRST
+# SSH remotes
+[includeIf "hasconfig:remote.*.url:git@github.com:gotracksuit/**"]
+	path = ~/.config/git/config-gh-tracksuit
+[includeIf "hasconfig:remote.*.url:git@github.com:*/*"]
+	path = ~/.config/git/config-gh-personal
+# HTTPS remotes
+[includeIf "hasconfig:remote.*.url:https://github.com/gotracksuit/**"]
+	path = ~/.config/git/config-gh-tracksuit
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+	path = ~/.config/git/config-gh-personal
