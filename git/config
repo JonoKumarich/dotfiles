@@ -1,6 +1,7 @@
 [user]
-  name = Jono Kumarich
-  email = jonathankumarich@gmail.com
+		name = jono-tracksuit
+		email = jono.kumarich@gotracksuit.com
+		signingkey = C3337CDEA986A71A
 [credential]
 		helper = osxkeychain
 [init]
@@ -21,6 +22,7 @@
 		excludesfile = ~/.config/git/.gitignore_global
 		pager = delta
 		whitespace = error
+	hooksPath = /Users/jono.kumarich/.git-hooks
 [interactive]
 		diffFilter = delta --color-only
 [delta]
@@ -29,14 +31,11 @@
 		side-by-side = true
 
 # https://www.benji.dog/articles/git-config/
-# More specific patterns must come FIRST
+# IMPORTANT: General patterns FIRST, specific patterns LAST (later values override)
 # SSH remotes
-[includeIf "hasconfig:remote.*.url:git@github.com:gotracksuit/**"]
-	path = ~/.config/git/config-gh-tracksuit
 [includeIf "hasconfig:remote.*.url:git@github.com:*/*"]
 	path = ~/.config/git/config-gh-personal
-# HTTPS remotes
-[includeIf "hasconfig:remote.*.url:https://github.com/gotracksuit/**"]
+[includeIf "hasconfig:remote.*.url:git@github.com:gotracksuit/**"]
 	path = ~/.config/git/config-gh-tracksuit
-[includeIf "hasconfig:remote.*.url:https://github.com/**"]
-	path = ~/.config/git/config-gh-personal
+[includeIf "hasconfig:remote.*.url:git@gh-work:gotracksuit/**"]
+	path = ~/.config/git/config-gh-tracksuit

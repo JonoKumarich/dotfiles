@@ -161,7 +161,6 @@ cython_debug/
 #.idea/
 
 .python-version
-uv.lock
 
 # sqlls language server config file
 .sqllsrc.json
@@ -178,3 +177,7 @@ CLAUDE.local.md
 .beads/
 .mcp.json
 
+notes/
+tasks/
+
+.serena

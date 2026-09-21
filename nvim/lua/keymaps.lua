@@ -86,5 +86,12 @@ vim.keymap.set("n", "<Leader>yy", '"+yy', { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("v", "<Leader>y", '"+y', { noremap = true, silent = true })
 
+-- Copy current filename to clipboard
+vim.keymap.set("n", "<Leader>cp", function()
+  local filename = vim.fn.expand("%:t")
+  vim.fn.setreg("+", filename)
+  vim.notify("Copied: " .. filename)
+end, { desc = "[C]opy file[p]ath (filename) to clipboard" })
+
 -- Open Oil file explorer
 vim.keymap.set("n", "<Leader>o", "<cmd>Oil<CR>", { desc = "Open Oil file explorer" })

@@ -45,6 +45,20 @@ key-mapping.preset = 'qwerty'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = 'move-mouse window-lazy-center'
 
+# Focus follows mouse: hovering a window focuses it
+focus-follows-mouse.enabled = true
+
+# See: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
+on-window-detected = [
+    { if = 'test %{app-bundle-id} = com.mitchellh.ghostty', run = 'move-node-to-workspace T' },
+    { if = 'test %{app-bundle-id} = com.spotify.client', run = 'move-node-to-workspace M' },
+    { if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap', run = 'move-node-to-workspace S' },
+    { if = 'test %{app-bundle-id} = company.thebrowser.Browser', run = 'move-node-to-workspace B' },
+    { if = 'test %{app-bundle-id} = notion.id', run = 'move-node-to-workspace N' },
+    { if = 'test %{app-bundle-id} = com.cron.electron', run = 'move-node-to-workspace C' },
+    { if = 'test %{app-bundle-id} = com.bitwarden.desktop', run = 'move-node-to-workspace P' },
+]
+
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
 # - Constant:     gaps.outer.top = 8
@@ -191,31 +205,3 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
-
-[[on-window-detected]]
-if.app-id = 'org.alacritty'
-run = 'move-node-to-workspace T'
-
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace M'
-
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace B'
-
-[[on-window-detected]]
-if.app-id = 'notion.id'
-run = 'move-node-to-workspace N'
-
-[[on-window-detected]]
-if.app-id = 'com.cron.electron'
-run = 'move-node-to-workspace C'
-
-[[on-window-detected]]
-if.app-id = 'com.bitwarden.desktop'
-run = 'move-node-to-workspace P'

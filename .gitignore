@@ -18,6 +18,8 @@
 
 !nvim
 !nvim/**
+nvim/.channels_cache_v2.json
+nvim/.users_cache.json
 
 !tmux/
 !tmux/tmux.conf

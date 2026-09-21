@@ -17,7 +17,5 @@ zoxide init fish --cmd cd | source
 # uv
 fish_add_path "/Users/jono.kumarich/.local/bin"
 
-fish_add_path /Users/jono.kumarich/.local/bin
-
 # dbt aliases
 alias dbtf=/Users/jono.kumarich/.local/bin/dbt
