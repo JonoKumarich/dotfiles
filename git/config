@@ -35,7 +35,22 @@
 # SSH remotes
 [includeIf "hasconfig:remote.*.url:git@github.com:*/*"]
 	path = ~/.config/git/config-gh-personal
+[includeIf "hasconfig:remote.*.url:git@gh-personal:*/*"]
+	path = ~/.config/git/config-gh-personal
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+	path = ~/.config/git/config-gh-personal
 [includeIf "hasconfig:remote.*.url:git@github.com:gotracksuit/**"]
 	path = ~/.config/git/config-gh-tracksuit
 [includeIf "hasconfig:remote.*.url:git@gh-work:gotracksuit/**"]
 	path = ~/.config/git/config-gh-tracksuit
+[includeIf "hasconfig:remote.*.url:https://github.com/gotracksuit/**"]
+	path = ~/.config/git/config-gh-tracksuit
+
+# SSH picks a key by host, so route each owner to the host alias holding its key (see ~/.ssh/config)
+[url "git@gh-personal:JonoKumarich/"]
+	insteadOf = git@github.com:JonoKumarich/
+	insteadOf = https://github.com/JonoKumarich/
+[url "git@github.com:gotracksuit/"]
+	insteadOf = https://github.com/gotracksuit/
+[alias]
+	cleanup = !git checkout main && git fetch --prune && git branch --merged | grep -vE \"^\\*|^\\s*(main|master)$\" | xargs -r git branch -d
