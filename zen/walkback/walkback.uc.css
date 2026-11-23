@@ -1,0 +1,5 @@
+/* Adds tree depth on top of Zen's folder indent, so this selector has to out-specify Zen's own
+   margin-inline-start rule for tabs in zen-tabs/vertical-tabs.css. */
+:root[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[walkback-depth]:not([pinned], [zen-glance-tab]) {
+  margin-inline-start: calc(var(--zen-folder-indent, 0px) + var(--walkback-depth) * 14px) !important;
+}

@@ -1,0 +1,9 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Cleanup",
+  "version": "1.0",
+  "description": "Closes unpinned tabs that haven't been viewed for 12 hours, like Arc's auto archive.",
+  "permissions": ["alarms"],
+  "background": { "scripts": ["background.js"] },
+  "browser_specific_settings": { "gecko": { "id": "tab-cleanup@jono.local" } }
+}
