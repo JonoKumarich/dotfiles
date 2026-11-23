@@ -47,13 +47,22 @@ vim.keymap.set("i", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("i", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
+--  Use CTRL+<hjkl> to switch between windows, falling through to the next Rex pane at the edge
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+local function navigate(wincmd, rex_direction)
+  return function()
+    local win = vim.api.nvim_get_current_win()
+    vim.cmd.wincmd(wincmd)
+    if win == vim.api.nvim_get_current_win() and vim.env.REX_SESSION then
+      vim.system({ "rex", "focus", rex_direction, "-s", vim.env.REX_SESSION })
+    end
+  end
+end
+vim.keymap.set("n", "<C-h>", navigate("h", "left"), { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", navigate("l", "right"), { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", navigate("j", "down"), { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", navigate("k", "up"), { desc = "Move focus to the upper window" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
