@@ -1,0 +1,37 @@
+# shellcheck shell=bash
+# 1Password Environments mounts .env files as named pipes holding unquoted
+# KEY=value lines, which the stdlib dotenv rejects (regular files only, and no
+# unquoted spaces). Everything after the first "=" is taken as the value, with
+# one pair of surrounding quotes stripped.
+_load_env_file() {
+  local line key value
+  while IFS= read -r line || [[ -n $line ]]; do
+    [[ $line =~ ^[[:space:]]*(#|$) ]] && continue
+    line=${line#export }
+    key=${line%%=*}
+    value=${line#*=}
+    if [[ $value =~ ^\"(.*)\"$ || $value =~ ^\'(.*)\'$ ]]; then
+      value=${BASH_REMATCH[1]}
+    fi
+    export "$key=$value"
+  done < "$1"
+}
+
+dotenv() {
+  local path=${1:-$PWD/.env}
+  [[ -d $path ]] && path=$path/.env
+  watch_file "$path"
+  if ! [[ -f $path || -p $path ]]; then
+    log_error ".env at $path not found"
+    return 1
+  fi
+  _load_env_file "$path"
+}
+
+dotenv_if_exists() {
+  local path=${1:-$PWD/.env}
+  [[ -d $path ]] && path=$path/.env
+  watch_file "$path"
+  [[ -f $path || -p $path ]] || return 0
+  _load_env_file "$path"
+}
