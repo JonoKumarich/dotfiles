@@ -26,3 +26,15 @@ nvim/.users_cache.json
 
 !kanata
 !kanata/**
+tmux/plugins/
+
+!zen/
+!zen/**
+zen/**/*.xpi
+
+!rex/
+!rex/init.lua
+
+!direnv/
+!direnv/direnv.toml
+!direnv/direnvrc
